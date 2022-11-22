@@ -1,3 +1,4 @@
+
 function escopoSorteador() {//começo do escopo isolado
     const form = document.querySelector('.form')
     const resultado = document.querySelector('.resultado')
@@ -52,7 +53,7 @@ function ordenacao(entrada,parametro){//ordena o array para resposta
         switch (parametro) {
         case 0:
             for(let i = 0; i < entradas.length;){
-                ordenado[i] = classificado[i] + " - " + entradas[i];
+                ordenado[i] = classificado[i] + " ° " + entradas[i];
                 i++;
             }
             ordenado.sort();
@@ -60,7 +61,7 @@ function ordenacao(entrada,parametro){//ordena o array para resposta
         break;
         case 1:
             for(let i = 0; i < entradas.length;){
-                ordenado[i] = classificado[i] + " - " + entradas[i];
+                ordenado[i] = classificado[i] + " ° " + entradas[i];
                 i++;
             }
             ordenado.sort();

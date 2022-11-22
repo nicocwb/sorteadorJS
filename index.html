@@ -4,22 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorteador</title>
-    <link href="style.css" rel="stylsheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
 </head>
-<body>
-    <p>Sorteador</p>
-    <form class="form" action="" method="get">
-        <p>Nomes: <input type="text" class="entrada"> </p> 
-        <p>Insira os nome utilizando ; para separar.</p>
-        <p> Ordenar resultado</p>
-        <span aria-hidden="true">Descrescente</span>
-        <input type="range" min="0" max="1" class="ordem">
-        <span aria-hidden="true">Crescente</span> </br>
-        <button>Sortear</button>
-    </form>
-    <div class="resultado" action="" method="post">
+<body class="text-center">
+    <main class="form-sorteador w-100">
+        <div class="principal">
+            <img class="mb-4" src="svg/34-code-outline.gif" alt="" width="72" height="57">
+            <form class="form" action="" method="get">
+                <div class="glitch-wrapper">
+                    <div class="glitch" data-glitch="Sorteador">Sorteador</div>
+                </div>
+                <p class="texto-branco">Insira os nomes</p> 
+                <input type="text" class="entrada">
+                <p class="texto-vermelho">Insira os nome utilizando ; para separar.</p>
+                <p class="texto-branco"> Ordenar resultado</p>
+                <span aria-hidden="true">Descrescente</span>
+                <input type="range" min="0" max="1" class="ordem">
+                <span aria-hidden="true">Crescente</span> </br>
+                <button class="btn btn-dark">Sortear</button>   
+            </form>
+        </div>
+        <div class="secundario">
+            <div name ='Resultado' class="resultado" action="" method="post">
+            <p>Tabela</p>
+            </div>   
+        </div>
+    </main>
     
-    </div>
-         <script src="JS/funcoes.js"> </script>
+         
+    <script src="JS/funcoes.js"> </script>
 </body>
 </html>
