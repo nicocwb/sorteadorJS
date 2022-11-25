@@ -13,11 +13,11 @@ function recebeEventoForm (evento){
         entrada: String(entrada.value),
         ordem: Number(ordem.value)
     });
-    console.log(dados);
+    //imprimeOrdenado(entrada); <- Ver funcão
+    
     ordenacao(entrada);
-
     resultado.innerHTML = ordenado;
-        
+
 }//Chamar funções até esta linha
 
 form.addEventListener ('submit', recebeEventoForm);//Aguarda o evento submit
@@ -53,7 +53,7 @@ function ordenacao(entrada,parametro){//ordena o array para resposta
         switch (parametro) {
         case 0:
             for(let i = 0; i < entradas.length;){
-                ordenado[i] = classificado[i] + " ° " + entradas[i];
+                ordenado[i] = classificado[i] + " - " + entradas[i];
                 i++;
             }
             ordenado.sort();
@@ -61,7 +61,7 @@ function ordenacao(entrada,parametro){//ordena o array para resposta
         break;
         case 1:
             for(let i = 0; i < entradas.length;){
-                ordenado[i] = classificado[i] + " ° " + entradas[i];
+                ordenado[i] = classificado[i] + " - " + entradas[i];
                 i++;
             }
             ordenado.sort();
@@ -71,5 +71,21 @@ function ordenacao(entrada,parametro){//ordena o array para resposta
     }
     return ordenado;
 }
+/*tentativa de implementação da para impressão linha a linha, porém o problema não foi resolvido a tempo.
+function 'imprimeOrdenado' (entrada){
+    ordenacao(entrada);
+    console.log(ordenado);
+    if (!ordenado[0] == '-1'){
+        for (let i = 0; i < ordenado.length;){
+        console.log(ordenado[i]);
+        resultado.appendChild += `${ordenado[1]}`;
+        i++;
+        }
+    } else {
+        resultado.textContent = `Nenhum nome ou palavra inserido!`;
+    };  
+}
+*/
+
 } // término do escopo
 escopoSorteador();
